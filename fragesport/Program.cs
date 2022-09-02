@@ -17,10 +17,10 @@ pText = Console.ReadLine();
 
 Console.Clear();
 //First question
-while(questions != 1){
     Console.WriteLine("First question");
     Console.WriteLine("What can an int variabel store?");
     Console.WriteLine("1:Text\n2:Numbers\n3:Pictures");
+while(questions != 1){
     pText = Console.ReadLine();
     if(pText == "2"){
         points++;
@@ -29,13 +29,30 @@ while(questions != 1){
     if(pText == "1" || pText == "3"){
         questions++;
     }
+    if(pText != "1" && pText != "2" && pText != "3"){
+        Console.WriteLine("Type 1, 2 or 3 to answer");
+    }
 }
 
+//Second question
+Console.Clear();
+Console.WriteLine("Second question");
+Console.WriteLine("What can an string variabel store?");
+Console.WriteLine("1:Numbers\n2:True or False\n3:Text");
 while(questions != 2){
-    Console.WriteLine("Second question");
     pText = Console.ReadLine();
-    
+    if(pText == "3"){
+        points++;
+        questions++;
+    }
+    if(pText == "1" || pText == "2"){
+        questions++;
+    }
+    if(pText != "1" && pText != "2" && pText != "3"){
+        Console.WriteLine("Type 1, 2 or 3 to answer");
+    }
 }
+
 
 
 Console.ReadLine();
