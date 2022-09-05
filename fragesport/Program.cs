@@ -53,6 +53,61 @@ while(questions != 2){
     }
 }
 
+//Third question
+Console.Clear();
+Console.WriteLine("Third question");
+Console.WriteLine("What does ReadLine do?");
+Console.WriteLine("1:Write a line\n2:Takes a string input\n3:Takes one input from the keyboard");
+while(questions != 3){
+    pText = Console.ReadLine();
+    if(pText == "2"){
+        points++;
+        questions++;
+    }
+    if(pText == "1" || pText == "3"){
+        questions++;
+    }
+    if(pText != "1" && pText != "2" && pText != "3"){
+        Console.WriteLine("Type 1, 2 or 3 to answer");
+    }
+}
 
+//Forth quetsion
+Console.Clear();
+Console.WriteLine("Forth question");
+Console.WriteLine("What does != mean?");
+Console.WriteLine("1:Does not equal\n2:Equals\n3:Check if close to");
+while(questions != 4){
+    pText = Console.ReadLine();
+    if(pText == "1"){
+        points++;
+        questions++;
+    }
+    if(pText == "2" || pText == "3"){
+        questions++;
+    }
+    if(pText != "1" && pText != "2" && pText != "3"){
+        Console.WriteLine("Type 1, 2 or 3 to answer");
+    }
+}
+
+//Fifth question
+Console.Clear();
+Console.WriteLine("Fifth question");
+Console.WriteLine("What will happen if you write backslash n?");
+Console.WriteLine("1:Change row\n2:Cquotation marks\n3:Ends the sentence");
+while(questions != 5){
+    pText = Console.ReadLine();
+    if(pText == "1"){
+        points++;
+        questions++;
+    }
+    if(pText == "2" || pText == "3"){
+        questions++;
+    }
+    if(pText != "1" && pText != "2" && pText != "3"){
+        Console.WriteLine("Type 1, 2 or 3 to answer");
+    }
+}
 
 Console.ReadLine();
