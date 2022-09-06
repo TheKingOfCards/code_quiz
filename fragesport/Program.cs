@@ -1,11 +1,16 @@
 ﻿string pText = "";
 int points = 0;
 int questions = 0;
+bool end = false;
 
-Console.WriteLine("Welcome to code quiz");
-Console.WriteLine("Get 3 or more answers correct to win");
-Console.WriteLine("Type 1, 2 or 3 to answer");
-Console.WriteLine("Write enter to begin");
+
+    pText = "";
+    points = 0;
+    questions = 0;
+    Console.WriteLine("Welcome to code quiz");
+    Console.WriteLine("Get 3 or more answers correct to win");
+    Console.WriteLine("Type 1, 2 or 3 to answer");
+    Console.WriteLine("Write enter to begin");
 
 
 while(pText != "enter"){    
@@ -15,12 +20,14 @@ pText = Console.ReadLine();
     }
 }
 
+while(end == false){
 Console.Clear();
 //First question
     Console.WriteLine("First question");
     Console.WriteLine("What can an int variabel store?");
     Console.WriteLine("1:Text\n2:Numbers\n3:Pictures");
 while(questions != 1){
+    pText = "";
     pText = Console.ReadLine();
     if(pText == "2"){
         points++;
@@ -109,5 +116,42 @@ while(questions != 5){
         Console.WriteLine("Type 1, 2 or 3 to answer");
     }
 }
+
+if(questions == 5){
+    Console.Clear();
+    if(points == 3 || points == 4){
+        Console.WriteLine($"You got {points} out of 5 questions right");
+        Console.WriteLine("Good work, write restart to try agin to get all of them right");
+        Console.WriteLine("Or write end to exit");
+    }
+    if(points == 2 || points == 1){
+        Console.WriteLine($"You got {points} out of 5 questions right");
+        Console.WriteLine("You didn't get many points, try agian by typing restart or end to exit");
+    }
+    if(points == 0){
+        Console.WriteLine("Seriously? Zero points, you don't get to know how to exit the quiz");
+        Console.WriteLine("Write restart to try it again");
+    }
+    if(points == 5){
+        Console.WriteLine("You got every qestion right, good job!");
+        Console.WriteLine("Too exit the program write end or if you want to do it agin write restart");
+    }
+    while(pText != "restart" && pText != "end"){
+    pText = "";
+    pText = Console.ReadLine();
+    if(pText == "restart"){
+        points = 0;
+        questions = 0;
+    }
+    if(pText == "end"){
+        end = true;
+    }
+    if(pText != "restart" && pText != "end"){
+        Console.WriteLine("Try something else");
+    }
+}
+}
+}
+
 
 Console.ReadLine();
